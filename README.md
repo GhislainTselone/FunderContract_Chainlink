@@ -1,66 +1,24 @@
-## Foundry
+# FUNDER CONTRACT PROJECT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## About
+The Funder contract project is a smart contract that automatically and randomly funds one account among a bunch of accounts previously registered as "IN NEED" each 30 seconds. 
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Specific tools involve
+The Funder contract use external computation to trigger automatically the whole mecanism. Two Chainlink oracle services are involved : 
 
-## Documentation
+1. Chainlink VRF (Randomness)
+PS: Implementation made directly in the contract.
 
-https://book.getfoundry.sh/
+2. Chainlink Automation
+PS: Manually created an upKeep + after making the contract compatible.
 
-## Usage
 
-### Build
 
-```shell
-$ forge build
-```
+## Test Phase
+The code will be test only on a forked POLYGON MUMBAI network. 
 
-### Test
 
-```shell
-$ forge test
-```
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## Deployment
+The smart contract will be then deployed on POLYGON MUMBAI NETWORK.
